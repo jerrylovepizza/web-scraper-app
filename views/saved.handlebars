@@ -1,0 +1,79 @@
+<!-- ======================================= Nav ======================================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main">
+    <img src="/css/original.gif" class="panda" alt="">
+    <a href="/" class="header" style="text-decoration:none">IGN Scraper </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="/" class="btn btn-light btn-sm navBtn" id="homePgBtn">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ======================================= Body ======================================= -->
+<div class="container newsList">
+    <div class="row">
+        {{#each saved}}
+        <div class="list-group col-lg-5 col-12 m-auto" id="news">
+            <a href="{{this.link}}" id="ignLink">
+                <h6>{{this.title}}</h6>
+                <img id="thumb" src="{{this.img}}">
+            </a>
+            <!-- ====== note button ====== -->
+            <button class="noteBtn btn-info" data-ObjectId="{{this._id}}">
+                <i class="far fa-edit"></i>
+            </button>
+
+            <!-- ====== unSave button ====== -->
+            <button class="unSaveBtn btn-success" data-ObjectId="{{this._id}}" data-State="{{this.saved}}">
+                <i class="fas fa-trash-restore-alt"></i>
+            </button>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<!-- ======================================= note ======================================= -->
+<div class="popUp hidden">
+    <div class="noteTable mx-auto col-lg-7 col-md-9 col-11">
+        <div class="noteHeader">
+            <span class="close btn">x</span>
+        </div>
+        <div class="row" id="row">
+            {{!-- left side --}}
+            <ul class="noteList col-7">
+                <!-- ==== all notes show below ==== -->
+
+            </ul>
+            {{!-- left end --}}
+
+            {{!-- right side --}}
+            <div class="noteForm col-5">
+                <div class="newNote"></div>
+                <form>
+                    <div class="form-group">
+                        <label for="writeNote">Note</label>
+                        <textarea class="form-control" id="writeNote" rows="5">
+                            {{!-- Write Note Here --}}
+                        </textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm submitNoteBtn">Submit</button>
+                </form>
+            </div>
+            {{!-- right end --}}
+        </div>
+    </div>
+</div>
+
+<!-- ======================================= footer ======================================= -->
+<footer>
+    <hr>
+    <span>Copyright &copy; 2019 Isaac Wu &nbsp;</span>
+    <i class="fas fa-gamepad"></i>
+    <span>&nbsp; Powered by IGN.com</sp>
+</footer>
