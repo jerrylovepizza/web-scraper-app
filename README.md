@@ -16,7 +16,7 @@ An app that allows users to scrape news, images, and many useful information fro
 
 #### 🎮 Author
 
-[Isaac Wu](https://github.com/squall2046)
+[Jerry Dai](https://github.com/jerrylovepizza)
 * [App demo](https://webscraper-iw.herokuapp.com/)
 
 ## Copyright
