@@ -19,9 +19,9 @@ An app that allows users to scrape news, images, and many useful information fro
 [Jerry Dai](https://github.com/jerrylovepizza)
 * [App demo](https://webscraper-iw.herokuapp.com/)
 
-## Copyright
+### Copyright
 © 2019 All Rights Reserved
-## 
+###
 
 ![concert](./public/Snipaste_2019-05-01_17-06-43.png)
 
